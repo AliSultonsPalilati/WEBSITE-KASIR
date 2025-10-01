@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 197 20% 20%;
 
-    --primary: 197 14% 51%;
+    --primary: 196 91% 46%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 166 25% 85%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 166 20% 88%;
     --muted-foreground: 197 10% 45%;
 
-    --accent: 197 18% 45%;
+    --accent: 196 85% 40%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,21 +34,21 @@ All colors MUST be HSL.
 
     --border: 166 20% 80%;
     --input: 0 0% 100%;
-    --ring: 197 14% 51%;
+    --ring: 196 91% 46%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 197 14% 51%;
+    --sidebar-background: 196 91% 46%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 197 14% 51%;
+    --sidebar-primary: 196 91% 46%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 197 18% 45%;
+    --sidebar-accent: 196 85% 40%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 197 12% 48%;
+    --sidebar-border: 196 80% 42%;
     --sidebar-ring: 166 31% 93%;
 
-    --shadow-soft: 0 2px 8px rgba(112, 137, 147, 0.1);
-    --shadow-medium: 0 4px 16px rgba(112, 137, 147, 0.15);
+    --shadow-soft: 0 2px 8px rgba(11, 166, 223, 0.1);
+    --shadow-medium: 0 4px 16px rgba(11, 166, 223, 0.15);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -62,7 +62,7 @@ All colors MUST be HSL.
     --popover: 197 18% 20%;
     --popover-foreground: 166 31% 93%;
 
-    --primary: 197 14% 51%;
+    --primary: 196 91% 46%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 197 18% 25%;
@@ -71,7 +71,7 @@ All colors MUST be HSL.
     --muted: 197 15% 30%;
     --muted-foreground: 166 15% 70%;
 
-    --accent: 197 18% 45%;
+    --accent: 196 85% 40%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
@@ -79,15 +79,15 @@ All colors MUST be HSL.
 
     --border: 197 15% 30%;
     --input: 197 18% 25%;
-    --ring: 197 14% 51%;
+    --ring: 196 91% 46%;
     
-    --sidebar-background: 197 14% 51%;
+    --sidebar-background: 196 91% 46%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 197 14% 51%;
+    --sidebar-primary: 196 91% 46%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 197 18% 45%;
+    --sidebar-accent: 196 85% 40%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 197 12% 48%;
+    --sidebar-border: 196 80% 42%;
     --sidebar-ring: 166 31% 93%;
   }
 }
@@ -109,11 +109,11 @@ All colors MUST be HSL.
 
 @layer components {
   .card-elegant {
-    @apply bg-card rounded-xl p-6 shadow-[0_2px_8px_rgba(112,137,147,0.1)] border border-border;
+    @apply bg-card rounded-xl p-6 shadow-[0_2px_8px_rgba(11,166,223,0.1)] border border-border;
   }
 
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-accent transition-all duration-300 rounded-lg px-6 py-3 font-medium shadow-[0_2px_8px_rgba(112,137,147,0.15)] hover:shadow-[0_4px_12px_rgba(112,137,147,0.2)] hover:translate-y-[-2px];
+    @apply bg-primary text-primary-foreground hover:bg-accent transition-all duration-300 rounded-lg px-6 py-3 font-medium shadow-[0_2px_8px_rgba(11,166,223,0.15)] hover:shadow-[0_4px_12px_rgba(11,166,223,0.2)] hover:translate-y-[-2px];
   }
 
   .input-elegant {
