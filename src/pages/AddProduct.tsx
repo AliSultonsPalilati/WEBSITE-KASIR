@@ -4,28 +4,55 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
-import { Package } from "lucide-react";
+import { Package, Trash2 } from "lucide-react";
+import { saveProduct, getProducts, deleteProduct } from "@/utils/storage";
+import { Product } from "@/types";
+
+const CATEGORIES = ["Makanan", "Minuman", "Snack", "Elektronik", "Alat Tulis", "Lainnya"];
 
 const AddProduct = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [stock, setStock] = useState("");
+  const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
+  const [products, setProducts] = useState<Product[]>(getProducts());
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!name || !price || !stock) {
-      toast.error("Nama, harga, dan stok harus diisi");
+    if (!name || !price || !stock || !category) {
+      toast.error("Nama, harga, stok, dan kategori harus diisi");
       return;
     }
 
+    const newProduct: Product = {
+      id: Date.now().toString(),
+      name,
+      price: parseFloat(price),
+      stock: parseInt(stock),
+      category,
+      description,
+      createdAt: new Date().toISOString(),
+    };
+
+    saveProduct(newProduct);
+    setProducts(getProducts());
     toast.success("Produk berhasil ditambahkan!");
+    
     setName("");
     setPrice("");
     setStock("");
+    setCategory("");
     setDescription("");
+  };
+
+  const handleDelete = (id: string) => {
+    deleteProduct(id);
+    setProducts(getProducts());
+    toast.success("Produk berhasil dihapus!");
   };
 
   return (
@@ -82,6 +109,22 @@ const AddProduct = () => {
             </div>
 
             <div className="space-y-2">
+              <Label htmlFor="category">Kategori</Label>
+              <Select value={category} onValueChange={setCategory}>
+                <SelectTrigger className="input-elegant">
+                  <SelectValue placeholder="Pilih kategori" />
+                </SelectTrigger>
+                <SelectContent>
+                  {CATEGORIES.map((cat) => (
+                    <SelectItem key={cat} value={cat}>
+                      {cat}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
               <Label htmlFor="description">Deskripsi (Opsional)</Label>
               <Textarea
                 id="description"
@@ -98,6 +141,39 @@ const AddProduct = () => {
           </form>
         </CardContent>
       </Card>
+
+      {/* Daftar Produk */}
+      {products.length > 0 && (
+        <Card className="card-elegant mt-6">
+          <CardHeader>
+            <CardTitle>Daftar Produk Tersimpan ({products.length})</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {products.map((product) => (
+                <div
+                  key={product.id}
+                  className="flex items-center justify-between p-4 bg-muted/30 rounded-lg"
+                >
+                  <div className="flex-1">
+                    <p className="font-medium">{product.name}</p>
+                    <p className="text-sm text-muted-foreground">
+                      Rp {product.price.toLocaleString("id-ID")} • Stok: {product.stock} • {product.category}
+                    </p>
+                  </div>
+                  <Button
+                    size="icon"
+                    variant="destructive"
+                    onClick={() => handleDelete(product.id)}
+                  >
+                    <Trash2 className="w-4 h-4" />
+                  </Button>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 };
