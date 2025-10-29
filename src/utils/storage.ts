@@ -44,14 +44,16 @@ export const generateWhatsAppMessage = (transaction: Transaction): string => {
     .map((item) => `${item.name} x${item.quantity} - Rp ${(item.price * item.quantity).toLocaleString("id-ID")}`)
     .join("\n");
 
-  return `*STRUK PEMBAYARAN*\n\n` +
+  return `*STRUK PEMBAYARAN KEDAI ARUNIKA*\n` +
+    `*Terima Kasih Telah Berbelanja!*\n\n` +
     `Tanggal: ${new Date(transaction.date).toLocaleString("id-ID")}\n` +
     `No. Transaksi: ${transaction.id}\n\n` +
     `*Detail Pesanan:*\n${itemsList}\n\n` +
     `*Total: Rp ${transaction.total.toLocaleString("id-ID")}*\n\n` +
     `Metode Pembayaran: ${transaction.paymentMethod}\n` +
     `Status: ${transaction.paymentStatus}\n\n` +
-    `Terima kasih atas pembelian Anda! 🙏`;
+    `KEDAI ARUNIKA! 🙏` + 
+    `\nAlamat Barumadehe, Kao Teluk,Kabupaten Halmahera Utara, Maluku Utara`; 
 };
 
 export const sendWhatsAppMessage = (phoneNumber: string, message: string): void => {

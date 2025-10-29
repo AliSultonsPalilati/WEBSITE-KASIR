@@ -10,7 +10,7 @@ import { Package, Trash2 } from "lucide-react";
 import { saveProduct, getProducts, deleteProduct } from "@/utils/storage";
 import { Product } from "@/types";
 
-const CATEGORIES = ["Makanan", "Minuman", "Snack", "Elektronik", "Alat Tulis", "Lainnya"];
+const CATEGORIES = ["Jus", "Milkshake", "Kelapa", "Lainnya"];
 
 const AddProduct = () => {
   const [name, setName] = useState("");

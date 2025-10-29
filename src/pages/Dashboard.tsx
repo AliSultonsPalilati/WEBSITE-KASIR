@@ -324,7 +324,6 @@ const Dashboard = () => {
                       <SelectContent>
                         <SelectItem value="Tunai">Tunai</SelectItem>
                         <SelectItem value="Transfer Bank">Transfer Bank</SelectItem>
-                        <SelectItem value="E-Wallet">E-Wallet</SelectItem>
                         <SelectItem value="QRIS">QRIS</SelectItem>
                       </SelectContent>
                     </Select>
