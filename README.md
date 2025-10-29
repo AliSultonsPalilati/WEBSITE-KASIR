@@ -1,73 +1,73 @@
-# Welcome to your Lovable project
+# Arunika Kasir (Aplikasi Kasir POS)
 
-## Project info
+Selamat datang di repositori Arunika Kasir, sebuah aplikasi Point of Sale (POS) modern yang dirancang untuk menyederhanakan dan mempercepat proses transaksi. Proyek ini dibangun sebagai aplikasi web front-end menggunakan tumpukan teknologi modern untuk kinerja yang cepat dan pengalaman pengguna yang intuitif.
 
-**URL**: https://lovable.dev/projects/876a8727-70b4-474a-ae29-7716b8eb001f
+![TampilanAplikasi](https://via.placeholder.com/800x400.png?text=Sisipkan+Screenshot+Aplikasi+Anda+Di+Sini)
+*(Ganti gambar placeholder di atas dengan screenshot aplikasi Anda)*
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Fitur Utama
 
-**Use Lovable**
+* **Otentikasi Pengguna:** Sistem login dan registrasi yang aman.
+* **Dashboard:** Tampilan ringkasan penjualan dan metrik penting.
+* **Manajemen Produk:** Kemampuan untuk menambah, melihat, dan mengelola produk.
+* **Sistem Kasir (POS):** Antarmuka kasir tingkat lanjut untuk memproses transaksi.
+* **Laporan Penjualan:** Melihat laporan penjualan yang terperinci.
+* **Riwayat Transaksi:** Melacak semua transaksi yang telah terjadi.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/876a8727-70b4-474a-ae29-7716b8eb001f) and start prompting.
+## 🛠️ Tumpukan Teknologi (Tech Stack)
 
-Changes made via Lovable will be committed automatically to this repo.
+Proyek ini dibangun menggunakan teknologi modern untuk memastikan skalabilitas dan kemudahan pengembangan:
 
-**Use your preferred IDE**
+* **Frontend:** [React](https://reactjs.org/)
+* **Build Tool:** [Vite](https://vitejs.dev/)
+* **Bahasa:** [TypeScript](https://www.typescriptlang.org/)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+* **UI Library:** [shadcn/ui](https://ui.shadcn.com/)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📦 Instalasi dan Menjalankan Proyek
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Ikuti langkah-langkah ini untuk menjalankan proyek secara lokal di komputer Anda.
 
-Follow these steps:
+**Prasyarat:**
+* Node.js (v18 atau lebih baru direkomendasikan)
+* npm (atau pnpm/yarn)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+**Langkah-langkah:**
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1.  **Clone repositori ini:**
+    ```bash
+    git clone [https://github.com/AliSultonsPalilati/WEBSITE-KASIR.git](https://github.com/AliSultonsPalilati/WEBSITE-KASIR.git)
+    ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2.  **Masuk ke direktori proyek:**
+    ```bash
+    cd WEBSITE-KASIR
+    ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+3.  **Install semua dependensi:**
+    ```bash
+    npm install
+    ```
 
-**Edit a file directly in GitHub**
+4.  **Jalankan server development:**
+    ```bash
+    npm run dev
+    ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+5.  Buka [http://localhost:5173](http://localhost:5173) (atau port lain yang muncul di terminal) di browser Anda untuk melihat aplikasi.
 
-**Use GitHub Codespaces**
+## 🌐 Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Proyek berbasis Vite + React ini dapat dengan mudah di-deploy ke platform hosting modern seperti:
 
-## What technologies are used for this project?
+* **Vercel**
+* **Netlify**
+* **GitHub Pages**
 
-This project is built with:
+Cukup hubungkan repositori Git Anda ke platform pilihan Anda, dan atur perintah build ke `npm run build` dengan direktori output `dist`.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📝 Lisensi
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/876a8727-70b4-474a-ae29-7716b8eb001f) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
